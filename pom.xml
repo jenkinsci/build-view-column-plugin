@@ -11,6 +11,9 @@
   <version>0.2-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
+  <name>Build View Column Plugin</name>
+  <url>https://wiki.jenkins-ci.org/display/JENKINS/Build+View+Column+Plugin</url>
+
   <!-- get every artifact through repo.jenkins-ci.org, which proxies all the artifacts that we need -->
   <repositories>
     <repository>
