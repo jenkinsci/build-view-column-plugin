@@ -16,6 +16,10 @@ public abstract class BuildViewColumnDescriptor extends Descriptor<BuildViewColu
     }
 
     public static DescriptorExtensionList<BuildViewColumn,BuildViewColumnDescriptor> all() {
-        return Jenkins.getInstance().getDescriptorList(BuildViewColumn.class);
+        try{
+            return Jenkins.getInstance().getDescriptorList(BuildViewColumn.class);
+        } catch(NullPointerException ex){
+            return DescriptorExtensionList.createDescriptorList(Jenkins.getInstance(), BuildViewColumn.class);
+        }
     }
 }
