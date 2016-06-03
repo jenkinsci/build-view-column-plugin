@@ -15,11 +15,11 @@ public abstract class BuildViewColumnDescriptor extends Descriptor<BuildViewColu
     protected BuildViewColumnDescriptor() {
     }
 
-    public static DescriptorExtensionList<BuildViewColumn,BuildViewColumnDescriptor> all() {
-        try{
-            return Jenkins.getInstance().getDescriptorList(BuildViewColumn.class);
-        } catch(NullPointerException ex){
-            return DescriptorExtensionList.createDescriptorList(Jenkins.getInstance(), BuildViewColumn.class);
+    public static DescriptorExtensionList<BuildViewColumn,BuildViewColumnDescriptor> all() throws IllegalStateException {
+        Jenkins j = Jenkins.getInstance();
+        if (j == null) {
+            throw new IllegalStateException();
         }
+        return j.getDescriptorList(BuildViewColumn.class);
     }
 }
