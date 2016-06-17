@@ -8,7 +8,7 @@
   
   <groupId>org.jenkins-ci.plugins</groupId>
   <artifactId>build-view-column</artifactId>
-  <version>0.3-SNAPSHOT</version>
+  <version>0.3</version>
   <packaging>hpi</packaging>
 
   <name>Build View Column Plugin</name>
@@ -44,6 +44,7 @@
     <connection>scm:git:git://github.com/jenkinsci/${project.artifactId}-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/${project.artifactId}-plugin.git</developerConnection>
     <url>http://github.com/jenkinsci/${project.artifactId}-plugin</url>
+    <tag>build-view-column-0.3</tag>
   </scm>
 
 </project>
